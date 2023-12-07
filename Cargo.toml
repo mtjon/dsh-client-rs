@@ -1,5 +1,5 @@
 [package]
-name = "openapi"
+name = "dsh-client-rs"
 version = "1.6.6"
 authors = ["OpenAPI Generator team and contributors"]
 description = "Resource management API for DSH"
