@@ -241,6 +241,7 @@ pub async fn allocation_tenant_secret_id_put(configuration: &configuration::Conf
     local_var_req_builder = local_var_req_builder.body(body.to_owned());
 
     let local_var_req = local_var_req_builder.build()?;
+    println!("Secret Put request: {:?}", local_var_req);
     let local_var_resp = local_var_client.execute(local_var_req).await?;
 
     let local_var_status = local_var_resp.status();
