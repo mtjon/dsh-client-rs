@@ -238,7 +238,7 @@ pub async fn allocation_tenant_secret_id_put(configuration: &configuration::Conf
     if let Some(ref local_var_token) = local_var_configuration.bearer_access_token {
         local_var_req_builder = local_var_req_builder.bearer_auth(local_var_token.to_owned());
     };
-    local_var_req_builder = local_var_req_builder.json(&body);
+    local_var_req_builder = local_var_req_builder.body(body.to_owned());
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
